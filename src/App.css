@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.body{
+    background-color: #3f3f3f;
+}
+.body-item{
+    background-color: #4b4b4b;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px #333;
+    border: 1px solid #262525;
+    color: #fff;
+    
+
+}
+.body-item-date{
+    
+    border: 1px solid #fff;
+    /* padding: 10px; */
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #2a2a2a;
+
+    
+}
+.body-item-date-month{
+    text-align: center;
+    font-size: 20px;
+
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-item-date-year{
+    text-align: center;
+    font-size: 13px;
+
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.body-item-date-day{
+    text-align: center;
+    font-size: 30px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
+.body-item-name-course{
+    font-size: 26px;
+    font-weight: 600;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.body-item-amount{
+    border: 1px solid #fff;
+    /* padding: 10px; */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+
 }
