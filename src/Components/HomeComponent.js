@@ -3,6 +3,8 @@ import {
   CardTitle, Breadcrumb, BreadcrumbItem
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import BookForm from './BookFormComponent';
+
 
 
 
@@ -17,11 +19,14 @@ function RenderMenuItem({ item, onClick }) {
         <div className='row' style={{ alignItems: 'center' }}>
           <div className='col-12 col-sm-2 '>
             <div class='body-item-date'>
-              <h6 class='body-item-date-month'>December
+              <h6 class='body-item-date-month'>
+                {item.date.toLocaleString('default', { month: 'long' })}
               </h6>
-              <h6 class='body-item-date-year'>2023
+              <h6 class='body-item-date-year'>
+                {item.date.getFullYear()}
               </h6>
-              <h3 class='body-item-date-day'>08
+              <h3 class='body-item-date-day'>
+                {item.date.getDate()}
               </h3>
             </div>
           </div>
@@ -31,9 +36,6 @@ function RenderMenuItem({ item, onClick }) {
           <div className='col-13 col-sm-2'>
             <h5 class="body-item-amount text-center">{item.amount} </h5>
           </div>
-
-
-
         </div>
       </Link>
     </div>
@@ -44,7 +46,7 @@ function RenderMenuItem({ item, onClick }) {
 
 
 const Home = (props) => {
-
+  console.log(props.item)
   const home = props.items.map((item) => {
     return (
       <div style={{ marginBottom: '10px' }} key={item.id}>
@@ -55,7 +57,10 @@ const Home = (props) => {
   });
 
   return (
-    <div class="body" style={{ backgroundColor: '#3f3f3f' }}>
+    <div class="body">
+      <BookForm addItem={props.addItem}
+      />
+
       <div class='body-item' style={{ marginBottom: '10px' }}>
         <div className='row' style={{ alignItems: 'center', }}>
           <div className='col-12 col-sm-2 '>

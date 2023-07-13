@@ -49,16 +49,16 @@ export const COMMENTS =
             date: "2012-10-16T17:57:28.556094Z"
         },
         {
-            id: 6,
-            itemid: 1,
+            id: "e3",
+            itemid: "e2",
             rating: 4,
             comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
             author: "Paul McVites",
             date: "2014-09-05T17:57:28.556094Z"
         },
         {
-            id: 7,
-            itemid: 1,
+            id: "e4",
+            itemid: "e2",
             rating: 3,
             comment: "Eat it, just eat it!",
             author: "Michael Jaikishan",
@@ -66,7 +66,7 @@ export const COMMENTS =
         },
         {
             id: 8,
-            itemid: 1,
+            itemid: "e2",
             rating: 4,
             comment: "Ultimate, Reaching for the stars!",
             author: "Ringo Starry",

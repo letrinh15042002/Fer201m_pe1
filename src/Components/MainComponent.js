@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import DishDetail from './ItemdetailComponent';
-import Header from './HeaderComponent';
-import Footer from './FooterComponent';
-import { addComment } from '../redux/ActionCreators';
+import { addComment, addItem } from '../redux/ActionCreators';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 
@@ -18,9 +16,13 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
 
-  addComment: (itemid, rating, author, comment) => {
+  // addComment: (itemid, rating, author, comment) => {
+  //   console.log('OK');
+  //   return dispatch(addComment(itemid, rating, author, comment))
+  // }
+  addItem: (title, amount, date) => {
     console.log('OK');
-    return dispatch(addComment(itemid, rating, author, comment))
+    return dispatch(addItem(title, amount, date))
   }
 
 });
@@ -32,7 +34,7 @@ class Main extends Component {
   constructor(props) {
     super(props);
 
-
+    console.log(props.items)
   }
 
   onDishSelect(itemid) {
@@ -56,10 +58,10 @@ class Main extends Component {
 
     return (
       <div>
-        {/* <Header /> */}
+        {/* <BookForm /> */}
         <div>
           <Switch>
-            <Route exact path='/home' component={() => <Home items={this.props.items} />} />
+            <Route exact path='/home' component={() => <Home items={this.props.items} addItem={this.props.addItem} />} />
             <Route path='/home/:itemid' component={ItemWithId} />
 
             <Redirect to="/home" />

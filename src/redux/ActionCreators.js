@@ -9,3 +9,11 @@ export const addComment = (itemid, rating, author, comment) => ({
         comment: comment
     }
 });
+export const addItem = (title, amount, date) => ({
+    type: ActionTypes.ADD_ITEM,
+    payload: {
+        title: title,
+        amount: amount,
+        date: date
+    }
+});
