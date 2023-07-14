@@ -92,7 +92,7 @@ function RenderDish({ item }) {
                 <CardImg width="100%" src={item.image} alt={item.name} />
                 <CardImgOverlay >
                     <CardTitle>{item.title}</CardTitle>
-                    <CardBody>{item.amount} hello</CardBody>
+                    <CardBody>{item.amount} hello </CardBody>
                 </CardImgOverlay>
 
             </Card>

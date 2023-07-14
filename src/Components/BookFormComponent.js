@@ -5,7 +5,6 @@ import {
 import { HashRouter, Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import DatePicker from "react-datepicker";
-// npm install react-datepicker --legacy-peer-deps
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -41,7 +40,6 @@ export class BookForm extends Component {
         var getDate = document.getElementById("getDate").value;
         const date = new Date(getDate);
         console.log(getDate)
-        // var date = new Date(getDate[0], getDate[1] - 1, getDate[2]);
         console.log(date)
         this.props.addItem(values.title, values.amount, date);
 
@@ -54,9 +52,7 @@ export class BookForm extends Component {
 
 
                 <div className="row row-content justify-content-center">
-                    {/* <Modal style={{ display: 'block' }}  >
-                        <ModalHeader > Submit comment</ModalHeader>
-                        <ModalBody> */}
+
                     <div className="col-12 col-md-6">
                         <div class="add-book-form">
                             <LocalForm onSubmit={(values) => this.handleSubmit(values)} >
@@ -104,6 +100,7 @@ export class BookForm extends Component {
                                     <Col md={6}>
 
                                         <PublishedDate name="datepic"></PublishedDate>
+                                        {/* <Control type="date" /> */}
 
                                     </Col>
                                 </Row>
@@ -119,8 +116,6 @@ export class BookForm extends Component {
                         </div>
 
                     </div>
-                    {/* </ModalBody>
-                    </Modal> */}
                 </div>
             </div>
         );

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Home from './HomeComponent';
+import Home from './BookListComponent.js';
 import DishDetail from './ItemdetailComponent';
 import { addComment, addItem } from '../redux/ActionCreators';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
+import BookForm from './BookFormComponent';
 
 
 const mapStateToProps = state => {
@@ -58,10 +59,10 @@ class Main extends Component {
 
     return (
       <div>
-        {/* <BookForm /> */}
+        <BookForm addItem={this.props.addItem} />
         <div>
           <Switch>
-            <Route exact path='/home' component={() => <Home items={this.props.items} addItem={this.props.addItem} />} />
+            <Route exact path='/home' component={() => <Home items={this.props.items} />} />
             <Route path='/home/:itemid' component={ItemWithId} />
 
             <Redirect to="/home" />
